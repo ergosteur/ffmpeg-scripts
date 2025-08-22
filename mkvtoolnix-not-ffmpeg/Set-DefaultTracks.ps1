@@ -1,0 +1,2 @@
+$files = Get-ChildItem -Filter '*.mkv' 
+$files | ForEach-Object { mkvpropedit.exe $_.FullName --edit track:s1 --set flag-default=0 --edit track:s2 --set flag-default=1 --edit track:a1 --set flag-default=0 --edit track:a2 --set flag-default=1 }
